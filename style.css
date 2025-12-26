@@ -1,0 +1,184 @@
+/* Обнуление и базовые настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131313;
+    color: #fff;
+    font-family: 'Nunito Sans', sans-serif; /* Основной шрифт текста */
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Верхняя навигация */
+.projects-header-nav {
+    display: flex;
+    justify-content: flex-end; /* Сдвигаем вправо */
+    margin-bottom: 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    width: 60%; /* Занимает правую часть */
+}
+
+.nav-item {
+    font-family: 'Yeseva One', serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3); /* Серый неактивный */
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.nav-item:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav-item.active {
+    color: #E3B873; /* Золотой активный */
+    border-bottom: 1px solid #E3B873;
+}
+
+/* Основной блок слайдера */
+.slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Левая часть (Инфо) */
+.slider-info {
+    width: 35%;
+    padding-top: 20px;
+}
+
+.section-title {
+    font-family: 'Yeseva One', serif;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin-bottom: 30px;
+    letter-spacing: -0.07em;
+}
+
+.section-desc {
+    font-size: 14px;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+
+/* Сетка характеристик (2 колонки) */
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.spec-title {
+    font-family: 'Yeseva One', serif;
+    font-size: 18px;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.spec-value {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/* Контролы (стрелки и точки) */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow svg path {
+    transition: 0.3s;
+}
+
+.arrow:hover svg path {
+    stroke: #E3B873; /* Золотой при наведении */
+}
+
+.dots {
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* Правая часть (Картинка) */
+.slider-image-container {
+    width: 60%;
+}
+
+.slider-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 900px) {
+    .projects-header-nav {
+        display: none; /* Скрываем верхние ссылки на мобилках */
+    }
+    .slider-wrapper {
+        flex-direction: column;
+    }
+    .slider-info, .nav-list, .slider-image-container {
+        width: 100%;
+    }
+    .slider-image-container {
+        order: -1; /* Картинка сверху */
+        margin-bottom: 20px;
+    }
+    .slider-controls {
+        display: none; /* Часто скрывают стрелки на моб */
+    }
+}

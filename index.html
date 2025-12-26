@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Projects Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="projects-section">
+    <div class="container">
+        
+        <div class="projects-header-nav">
+            <ul class="nav-list">
+                <li class="nav-item active" data-index="0">Rostov-on-Don, Admiral</li>
+                <li class="nav-item" data-index="1">Sochi Thieves</li>
+                <li class="nav-item" data-index="2">Rostov-on-Don Patriotic</li>
+            </ul>
+        </div>
+
+        <div class="slider-wrapper">
+            
+            <div class="slider-info">
+                <h2 class="section-title">Completed <br>Projects</h2>
+                
+                <p class="section-desc">
+                    Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
+                </p>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3 class="spec-title">City:</h3>
+                        <p class="spec-value" id="city">Rostov-on-Don <br> LCD admiral</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3 class="spec-title">apartment area:</h3>
+                        <p class="spec-value" id="area">81 m2</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3 class="spec-title">Repair time:</h3>
+                        <p class="spec-value" id="time">3.5 months</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3 class="spec-title">Repair Cost:</h3>
+                        <p class="spec-value">Upon request</p>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="arrow" id="prev">
+                        <svg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M41.9999 7.00012L1.99992 7.00012M1.99992 7.00012L8.17992 13.1801M1.99992 7.00012L8.17992 0.820118" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+
+                    <button class="arrow" id="next">
+                        <svg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 7L40 7M40 7L33.82 0.819998M40 7L33.82 13.18" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider-image-container">
+                <img src="" alt="Interior" id="slider-img" class="slider-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
