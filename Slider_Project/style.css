@@ -151,7 +151,7 @@ body {
     background-color: #fff;
 }
 
-/* Правая часть (Картинка) */
+
 .slider-image-container {
     width: 60%;
 }
@@ -166,7 +166,7 @@ body {
 /* Мобильная адаптация */
 @media (max-width: 900px) {
     .projects-header-nav {
-        display: none; /* Скрываем верхние ссылки на мобилках */
+        display: none; 
     }
     .slider-wrapper {
         flex-direction: column;
@@ -175,10 +175,10 @@ body {
         width: 100%;
     }
     .slider-image-container {
-        order: -1; /* Картинка сверху */
+        order: -1; 
         margin-bottom: 20px;
     }
     .slider-controls {
-        display: none; /* Часто скрывают стрелки на моб */
+        display: none; 
     }
 }
